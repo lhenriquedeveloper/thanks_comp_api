@@ -5,8 +5,8 @@ export const getPosts = async (req: Request, res: Response) => {
 
 
   //check if user exists
-  const posts = await Post.find()
-    .populate('user', '-password -confirmpassword');
+  const { userId } = req.params
+  const posts = await Post.find().where('user').equals(userId);
 
   if (!posts) {
     return res.status(404).json({ msg: 'No post found' });

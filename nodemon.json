@@ -1,0 +1,5 @@
+{
+  "execMap": {
+    "ts": "node --inspect --require ts-node/register"
+  }
+}

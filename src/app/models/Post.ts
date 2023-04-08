@@ -9,6 +9,10 @@ export const Post = model('Post', new Schema({
     type: String,
     required: true,
   },
+  filename: {
+    type: String,
+    required: true,
+  },
   title: {
     type: String,
     required: true,
@@ -18,4 +22,5 @@ export const Post = model('Post', new Schema({
     ref: 'User',
     required: true,
   },
+
 }));
