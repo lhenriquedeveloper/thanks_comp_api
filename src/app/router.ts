@@ -12,7 +12,7 @@ export const router = Router();
 
 //Welcome route - Public route
 router.get("/", (req, res) => {
-  res.send("Server is running");
+  res.send("Bem Vindo a API do ThanksComp, tente a rota /posts, para retornar todos os posts até agora!");
 });
 //Create user route - Public route
 router.post("/auth/register", createUser);
